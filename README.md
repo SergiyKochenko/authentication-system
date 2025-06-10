@@ -1,5 +1,18 @@
 # Authentication System
 
+## Table of Contents
+
+- [Authentication System](#authentication-system)
+  - [Table of Contents](#table-of-contents)
+  - [Project Overview](#project-overview)
+  - [Features](#features)
+  - [Technologies Used](#technologies-used)
+  - [Installation](#installation)
+  - [Database Setup](#database-setup)
+  - [Usage](#usage)
+  - [Deployment](#deployment)
+  - [Credits](#credits)
+
 ## Project Overview
 
 This project is an authentication system designed to manage user registration, login, and secure access to resources. It demonstrates the implementation of secure authentication practices using modern technologies.
@@ -36,6 +49,18 @@ This project is an authentication system designed to manage user registration, l
 3. Install development dependencies:
    ```bash
    npm install nodemon -D
+   ```
+
+## Database Setup
+
+1. Create a MongoDB cluster using [MongoDB Atlas](https://www.mongodb.com/atlas/database).
+2. Obtain the connection string from MongoDB cluster and update the `.env` file:
+   ```
+   MONGO_URI=<connection_string>
+   ```
+3. Ensure the database name is specified in the connection string, e.g.:
+   ```
+   MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/auth-system?retryWrites=true&w=majority
    ```
 
 ## Usage
