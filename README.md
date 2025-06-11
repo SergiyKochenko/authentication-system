@@ -10,6 +10,8 @@
   - [Installation](#installation)
   - [Database Setup](#database-setup)
   - [Usage](#usage)
+  - [Endpoints](#endpoints)
+    - [Signup Endpoint](#signup-endpoint)
   - [Deployment](#deployment)
   - [Credits](#credits)
 
@@ -74,6 +76,44 @@ This project is an authentication system designed to manage user registration, l
    ```bash
    npm run dev
    ```
+
+3. Test the endpoints using Postman or similar tools.
+
+## Endpoints
+
+### Signup Endpoint
+
+- **URL:** `/api/auth/signup`
+- **Method:** `POST`
+- **Description:** Registers a new user with email, name, and password.
+- **Request Body:**
+  ```json
+  {
+    "email": "user@example.com",
+    "name": "John Doe",
+    "password": "securepassword"
+  }
+  ```
+- **Response:**
+  ```json
+  {
+    "success": true,
+    "message": "User created successfully",
+    "user": {
+        "email": "myemail@gmail.com",
+        "name": "Sergiy",
+        "isVerified": false,
+        "verificationToken": "814374",
+        "verificationTokenExpiresAt": "2025-06-12T13:23:23.718Z",
+        "_id": "6840834b7b38da00292e94e7",
+        "lastLogin": "2025-06-11T13:23:23.721Z",
+        "createdAt": "2025-06-11T13:23:23.725Z",
+        "updatedAt": "2025-06-11T13:23:23.725Z",
+        "__v": 0
+    }
+}
+  ```
+- **Testing:** This endpoint has been tested using Postman to ensure proper functionality and error handling.
 
 ## Deployment
 
